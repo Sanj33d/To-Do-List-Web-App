@@ -13,7 +13,7 @@ const addToTask = () => {
         const span  = document.createElement("span");
         span.innerHTML = "×";
         li.appendChild(span);
-        
+        saveData();
     }
     inputBox.value = "";
 }
