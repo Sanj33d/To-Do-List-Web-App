@@ -38,3 +38,13 @@ const showData = () => {
 }
 
 showData();
+
+const handleClear = () => {
+    if (listContainer.innerHTML === "") {
+        alert("Nothing to be cleared")
+    }
+    else{
+        listContainer.innerHTML = "";
+        saveData();
+    }
+}

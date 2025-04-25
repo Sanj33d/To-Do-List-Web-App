@@ -12,13 +12,16 @@
             <h2>To-Do List <img src="images/toDo.png"></h2>
             <div class="row">
                 <input type="text" placeholder="Add your task" id="input-box">
-                <button onclick="addToTask()">Add</button>
+                <button class="btn-add" onclick="addToTask()">Add</button>
             </div>
             <ul id="list-container">
                 <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li> -->
             </ul>
+            <div class="btn-clear-container">
+                <button onclick="handleClear()" class="btn-clear">Clear All</button>
+            </div>
         </div>
         <footer class="">
             By Sanjeed Showkat

@@ -19,18 +19,19 @@
     max-width: 540px;
     border-radius: 10px;
     margin: 100px auto;
-    padding: 40px 30px 70px;
+    padding: 10px 30px;
 }
 
 .to-do h2{
     color: rgb(146, 12, 148);
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .to-do h2 img{
-    width: 30px;
+    width: 60px;
     margin-left: 10px;
 }
 
@@ -51,7 +52,7 @@ input{
     padding: 10px;
 }
 
-button{
+.btn-add{
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -100,6 +101,23 @@ ul li span{
     font-size: 20px;
     color: #555;
     /* line-height: 40px; */
+}
+
+.btn-clear{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: rgb(250, 81, 81);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.btn-clear-container{
+    text-align: center;
+    margin-top: 20px;
 }
 
 footer{
