@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 800;
+    /* new */
+    box-sizing: border-box;
+}
+
+.container{
+    background: linear-gradient(135deg, rgb(174, 6, 149), rgb(81, 19, 205));
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.toDo{
+    background: white;
+    max-width: 540px;
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 40px 30px 70px;
+}
+
+.toDo h2{
+    color: rgb(146, 12, 148);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toDo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    
+}
