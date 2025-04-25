@@ -13,21 +13,10 @@ const addToTask = () => {
         const span  = document.createElement("span");
         span.innerHTML = "×";
         li.appendChild(span);
-        saveData();
     }
     inputBox.value = "";
+    saveData();
 }
-
-listContainer.addEventListener("click", function(e) {
-    if (e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData();
-    }
-    else if (e.target.tagName === "SPAN") {
-        e.target.parentElement.remove();
-        saveData();
-    }
-})
 
 const saveData = () => {
     localStorage.setItem("data", listContainer.innerHTML)
@@ -39,12 +28,22 @@ const showData = () => {
 
 showData();
 
+listContainer.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+    }
+    else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+    }
+    saveData();
+})
+
 const handleClear = () => {
     if (listContainer.innerHTML === "") {
         alert("Nothing to be cleared")
     }
     else{
         listContainer.innerHTML = "";
-        saveData();
     }
+    saveData();
 }
