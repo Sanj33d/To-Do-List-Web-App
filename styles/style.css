@@ -8,8 +8,10 @@
 }
 
 .container{
-    background: linear-gradient(135deg, rgb(174, 6, 149), rgb(81, 19, 205));
-    width: 100%;
+    /* background: linear-gradient(135deg, rgb(174, 6, 149), rgb(81, 19, 205)); */
+    background: rgb(251, 105, 105);
+    /* by default width: 100% niye ney */
+    /* width: 100%; */
     min-height: 100vh;
     padding: 10px;
 }
@@ -19,11 +21,11 @@
     max-width: 640px;
     border-radius: 20px;
     margin: 100px auto;
-    padding: 10px 30px;
+    padding: 20px 10px 30px;
 }
 
 .to-do h2{
-    color: rgb(146, 12, 148);
+    color: rgb(174, 6, 149);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +47,7 @@
 }
 
 input{
-    /* flex1: used for any flexed item. it consumes the remaining gap */
+    /* flex1: used for any flexed item. It consumes the remaining gap */
     flex: 1; 
     border: none;
     outline: none;
@@ -53,7 +55,7 @@ input{
     padding: 10px;
 }
 
-.btn-add{
+#btn-add{
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -68,6 +70,7 @@ ul li{
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
+
     /* new <user-select> */
     user-select: none;
 
@@ -80,10 +83,14 @@ ul li{
 ul li::before{
     content: '';
     position: absolute;
+
+    /* new: width and height mandatory */
     width: 28px;
     height: 28px;
+
     background-image: url(../images/unchecked.png);
-    /* imp */
+    
+    /* background-size mandatory */
     background-size: cover;
     
     top: 12px;
@@ -103,22 +110,29 @@ ul li.checked::before{
 ul li span{
     position: absolute;
     right: 0;
-    top: 12px;
+    top: 5px;
     width: 40px;
     height: 40px;
     font-size: 20px;
     color: #555;
-    /* line-height: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#message{
+ul li span:hover{
+    background: rgb(234, 225, 225);
+    border-radius: 50%;
+}
+
+/* #message{
     text-align: center;
     margin-top: 20px;
-}
+} */
 
-.hide{
+/* .hide{
     display: none;
-}
+} */
 
 .btn-clear{
     border: none;
@@ -138,7 +152,9 @@ ul li span{
 }
 
 footer{
+    color: white;
+
     display: flex;
     justify-content: center;
-    color: white;
+    align-items: center;
 }
